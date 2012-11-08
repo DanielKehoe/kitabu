@@ -1,0 +1,5 @@
+h1. Kitabu
+
+Forked from "fnando/kitabu":https://github.com/fnando/kitabu.
+
+Changes output of TOC for HTML version.
