@@ -80,7 +80,9 @@ module Kitabu
       def to_html
         String.new.tap do |html|
           toc.each do |options|
-            html << %[<li class="level#{options[:level]}"><a href="##{options[:permalink]}"><i class="icon-chevron-right"></i> #{CGI.escape_html(options[:text])}</a></li>]
+            if options[:level] == 2
+              html << %[<li class="level#{options[:level]}"><a href="##{options[:permalink]}"><i class="icon-chevron-right"></i> #{CGI.escape_html(options[:text])}</a></li>]
+            end
           end
         end
       end
