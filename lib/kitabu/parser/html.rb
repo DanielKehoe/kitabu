@@ -48,7 +48,7 @@ module Kitabu
             # no markup files, so skip to the next one!
             next if files.empty?
 
-            chapters << %[<div class="chapter">#{render_chapter(files)}</div>]
+            chapters << %[<section class="chapter">#{render_chapter(files)}</section>]
           end
         end
       end

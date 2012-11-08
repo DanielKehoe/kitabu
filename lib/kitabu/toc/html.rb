@@ -16,7 +16,18 @@ module Kitabu
       def self.normalize(content)
         counter = {}
         html = Nokogiri::HTML.parse(content)
-        html.search("h2, h3, h4, h5, h6").each do |tag|
+        html.search("h2").each do |tag|
+          title = tag.inner_text
+          permalink = title.to_permalink
+
+          counter[permalink] ||= 0
+          counter[permalink] += 1
+
+          permalink = "#{permalink}-#{counter[permalink]}" if counter[permalink] > 1
+
+          tag.parent.set_attribute("id", permalink)
+        end
+        html.search("h3, h4, h5, h6").each do |tag|
           title = tag.inner_text
           permalink = title.to_permalink
 
