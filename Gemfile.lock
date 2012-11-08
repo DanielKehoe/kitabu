@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kitabu (1.0.1)
+    kitabu (1.0.1.1)
       RedCloth
       activesupport
       coderay
