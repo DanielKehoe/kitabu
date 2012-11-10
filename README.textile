@@ -2,4 +2,18 @@ h1. Kitabu
 
 Forked from "fnando/kitabu":https://github.com/fnando/kitabu.
 
-Changes output of TOC for HTML version.
+This fork of kitabu is used to generate the tutorials for the RailsApps project.
+
+The HTML output is designed for the stylesheets used by the "Twitter Bootstrap documentation":http://twitter.github.com/bootstrap/javascript.html, specifically the "scrollspy" feature.
+
+Changes:
+
+* Add .rvmrc file
+* Change output of the TOC for HTML version
+* Only include h2 headings in the TOC
+* Wrap @<h2>@ tags in section tags
+
+Structure:
+
+* One chapter per file in the text folder
+* Use only one @<h2>@ tag per chapter
