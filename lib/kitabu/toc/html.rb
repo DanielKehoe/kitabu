@@ -61,7 +61,7 @@ module Kitabu
         toc << {
           :level     => node.name.gsub(/[^\d]/, "").to_i,
           :text      => node.text,
-          :permalink => node["id"]
+          :permalink => node.parent["id"]
         }
       end
 
